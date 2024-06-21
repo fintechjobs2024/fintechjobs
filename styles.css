@@ -1,0 +1,111 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 10vh;
+}
+
+body {
+    position: relative; /* Ensures absolute positioning inside body works as expected */
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 75px;
+    height: 75px;
+}
+
+.container {
+    width: calc(100% - 40px); /* Adjusts width allowing for padding */
+    max-width: 700px; /* Maximum width for the container */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 100px 20px 20px; /* Padding inside the container */
+    background: white; /* Background color for the container */
+    text-align: left; /* Text alignment */
+    line-height: 1.2; /* Line height for better readability */
+}
+
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.iframe-container .airtable-embed {
+    width: 70%;
+    height: 533px;
+    margin: 0 auto;
+}
+
+h1, ul {
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#emoji-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through */
+    overflow: hidden; /* Keeps emojis within the screen bounds */
+    z-index: -1; /* Puts the background behind all other content */
+}
+
+.emoji {
+    position: absolute;
+    font-size: 48px; /* Size of emojis */
+    animation-duration: 20s; /* Duration of animation */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float1 {
+    0% { transform: translate(-10vw, -10vh); }
+    25% { transform: translate(110vw, 10vh); }
+    50% { transform: translate(90vw, 110vh); }
+    75% { transform: translate(-10vw, 80vh); }
+    100% { transform: translate(10vw, -10vh); }
+}
+
+@keyframes float2 {
+    0% { transform: translate(5vw, 100vh); }
+    50% { transform: translate(95vw, -10vh); }
+    100% { transform: translate(0vw, 100vh); }
+}
+
+@keyframes float3 {
+    0% { transform: translate(100vw, 50vh); }
+    50% { transform: translate(-10vw, 55vh); }
+    100% { transform: translate(100vw, 50vh); }
+}
+
