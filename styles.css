@@ -13,8 +13,28 @@ html, body {
 }
 
 body {
-    position: relative; /* Ensures absolute positioning inside body works as expected */
+    position: relative; /* Ensures that absolute positioning inside it is relative to body */
 }
+
+.clean-button {
+    position: absolute;
+    top: 33px; /* Adjust this value based on your header's dimensions */
+    right: 33px; /* Aligns the button to the right corner */
+    padding: 10px 20px; /* Adequate padding to make the button rectangular and touch-friendly */
+    background-color: black; /* Solid background color */
+    color: white; /* Text color for contrast */
+    font-family: 'Roboto', sans-serif; /* Maintain font consistency with the site */
+    text-decoration: none; /* Removes underline from the link */
+    font-size: 16px; /* Readable font size */
+    border: none; /* No border for a cleaner look */
+    border-radius: 4px; /* Slightly rounded corners for a modern look */
+    cursor: pointer; /* Changes the cursor to indicate button functionality */
+}
+
+.clean-button:hover {
+    background-color: #333; /* Slightly darker shade on hover for interactive feedback */
+}
+
 
 header {
     position: absolute;
